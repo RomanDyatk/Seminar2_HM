@@ -8,6 +8,7 @@ public class Animal {
     private List<String> vaccinations;
     private String illness;
     private String owner;
+    protected String type;
 
     public Animal(String name, LocalDate localDate, List<String> vaccinations, String illness, String owner) {
         this.name = name;
@@ -15,6 +16,7 @@ public class Animal {
         this.vaccinations = vaccinations;
         this.illness = illness;
         this.owner = owner;
+        this.type = getClass().getSimpleName();
     }
 
     public String getName() {
@@ -70,7 +72,7 @@ public class Animal {
         eat();
         play();
         sleep();
-    }
+    };
 
     @Override
     public String toString() {
